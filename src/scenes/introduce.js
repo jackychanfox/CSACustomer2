@@ -37,14 +37,14 @@ export default class Introduce extends Component {
     }
 
     componentDidMount(){
-        //azureService.getCSAData((err, res)=>{
-            // console.log(err, res);
-            // this.setState({
-            //     title: res.title,
-            //     description: res.description,
-            //     url: res.url
-            // })
-        //})
+        azureService.getCSAData((err, res)=>{
+            //console.log(err, res);
+            this.setState({
+                title: res.title,
+                description: res.description,
+                url: res.url
+            })
+        })
     }
 
     goMainView(){

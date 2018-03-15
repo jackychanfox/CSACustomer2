@@ -13,7 +13,7 @@ class CosmosAuth {
             'Content-Type': 'application/json'
         };
 
-        RNFetchBlob.fetch('GET', `${this.microsoftAPIProxy}/CSAData/get`, headers)
+        RNFetchBlob.fetch('GET', `${this.microsoftAPIProxy}/home`, headers)
         .then((res)=>{
             cb(null, JSON.parse(res.data))
         }).catch((err)=>{
